@@ -1,0 +1,418 @@
+/* ===========================
+   KLINIK MEOW LOGIN
+   MODERN VETERINARY STYLE
+=========================== */
+
+
+/* ===========================
+   COLOUR VARIABLES
+=========================== */
+
+:root {
+    --navy: #123B52;
+    --navy-dark: #0D3043;
+
+    --teal: #2FA6A0;
+    --teal-dark: #258C87;
+    --teal-light: #E8F5F4;
+
+    --background: #F7F9F8;
+
+    --white: #FFFFFF;
+
+    --text: #203746;
+    --text-light: #71808C;
+
+    --border: #D7E0DF;
+}
+
+
+/* ===========================
+   RESET
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ===========================
+   BODY
+=========================== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===========================
+   LOGIN CONTAINER
+=========================== */
+
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ===========================
+   LOGIN CARD
+=========================== */
+
+.login-card {
+    width: 600px;
+    max-width: 90%;
+
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(8px);
+
+    border-radius: 22px;
+
+    padding: 35px 60px;
+
+    box-shadow:
+        0 20px 50px rgba(18, 59, 82, 0.14);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo {
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+/* PAW ICON */
+
+.logo i {
+    font-size: 42px;
+
+    color: #2FA6A0;
+
+    margin-bottom: 8px;
+
+    display: inline-block;
+}
+
+
+/* KLINIK MEOW */
+
+.logo h1 {
+    font-size: 30px;
+
+    color: #123B52;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* SUBTITLE */
+
+.logo p {
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    margin-top: 4px;
+}
+
+
+/* ===========================
+   TITLE
+=========================== */
+
+.login-card h2 {
+    font-size: 32px;
+
+    color: var(--text);
+
+    margin-bottom: 5px;
+
+    font-weight: 700;
+}
+
+
+/* ===========================
+   SUBTITLE
+=========================== */
+
+.subtitle {
+    color: var(--text-light);
+
+    margin-bottom: 22px;
+
+    font-size: 15px;
+}
+
+
+/* ===========================
+   LABEL
+=========================== */
+
+label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    margin-top: 14px;
+
+    font-weight: 500;
+
+    color: var(--text);
+}
+
+
+/* ===========================
+   INPUT
+=========================== */
+
+.input-box {
+    display: flex;
+
+    align-items: center;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 12px 16px;
+
+    transition: 0.3s;
+}
+
+
+/* INPUT FOCUS */
+
+.input-box:focus-within {
+    border-color: var(--teal);
+
+    box-shadow:
+        0 0 0 3px rgba(47, 166, 160, 0.10);
+}
+
+
+/* INPUT ICON */
+
+.input-box i {
+    color: #89969D;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+
+/* ICON WHEN ACTIVE */
+
+.input-box:focus-within i {
+    color: var(--teal);
+}
+
+
+/* INPUT */
+
+.input-box input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    margin-left: 12px;
+
+    font-size: 15px;
+
+    color: var(--text);
+
+    background: transparent;
+}
+
+
+/* TOGGLE PASSWORD */
+
+.toggle-password {
+    cursor: pointer;
+
+    color: #89969D;
+
+    transition: 0.3s;
+}
+
+.toggle-password:hover {
+    color: var(--teal);
+}
+
+
+/* ===========================
+   REMEMBER
+=========================== */
+
+.remember {
+    margin-top: 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* REMEMBER LABEL */
+
+.remember label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 0;
+
+    font-size: 14px;
+
+    color: var(--text);
+}
+
+
+/* CHECKBOX */
+
+.remember input {
+    width: 16px;
+
+    height: 16px;
+
+    accent-color: var(--teal);
+}
+
+
+/* FORGOT PASSWORD */
+
+.remember a {
+    text-decoration: none;
+
+    color: #2FA6A0;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.remember a:hover {
+    color: var(--teal-dark);
+
+    text-decoration: underline;
+}
+
+
+/* ===========================
+   LOGIN BUTTON
+=========================== */
+
+button {
+    width: 100%;
+
+    margin-top: 24px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 12px;
+
+     background:  #123B52;
+
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 6px 15px rgba(18, 59, 82, 0.15);
+}
+
+
+/* BUTTON HOVER */
+
+button:hover {
+    background:  #0D3043;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 20px rgba(47, 166, 160, 0.20);
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer {
+    text-align: center;
+
+    margin-top: 22px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+
+    .login-card {
+        width: 90%;
+
+        padding: 30px 30px;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .login-card h2 {
+        font-size: 30px;
+    }
+
+
+}

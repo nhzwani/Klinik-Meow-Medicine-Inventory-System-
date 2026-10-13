@@ -1,0 +1,1332 @@
+/* =========================================================
+   KLINIK MEOW - DASHBOARD CSS
+   Modern Veterinary Inventory Management System
+========================================================= */
+
+
+/* =========================================================
+   COLOUR VARIABLES
+========================================================= */
+
+:root {
+    --navy: #123B52;
+    --navy-dark: #0D3043;
+
+    --teal: #2FA6A0;
+    --teal-dark: #258C87;
+    --teal-light: #E8F5F4;
+
+    --background: #F7F9F8;
+
+    --white: #FFFFFF;
+
+    --text: #203746;
+    --text-light: #71808C;
+
+    --border: #E5ECEB;
+
+    --green: #43A879;
+    --green-light: #EAF7F0;
+
+    --orange: #F2995A;
+    --orange-light: #FFF3E8;
+
+    --red: #E85D5D;
+    --red-light: #FDECEC;
+
+    --shadow: 0 4px 20px rgba(18, 59, 82, 0.08);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+
+    background: var(--navy);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 25px 20px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    z-index: 1000;
+}
+
+
+/* SIDEBAR SCROLLBAR */
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--teal);
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo i {
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.logo h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+
+/* MENU ICON */
+
+.sidebar ul li a i {
+    width: 22px;
+    text-align: center;
+}
+
+
+/* MENU HOVER */
+
+.sidebar ul li a:hover {
+    background: rgba(47, 166, 160, 0.18);
+    color: white;
+
+    transform: translateX(3px);
+}
+
+
+/* ACTIVE MENU */
+
+.sidebar ul li a.active {
+    background: var(--teal);
+    color: white;
+
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(47, 166, 160, 0.25);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    padding: 35px;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+    background: var(--white);
+
+    padding: 20px 30px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 30px;
+}
+
+
+/* TOPBAR TITLE */
+
+.topbar h2 {
+    color: var(--navy);
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+
+/* USER INFO */
+
+.user-info {
+    display: flex;
+
+    gap: 25px;
+
+    font-size: 15px;
+
+    color: var(--text);
+}
+
+.user-info strong {
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboard-page {
+    width: 100%;
+}
+
+
+/* =========================================================
+   DASHBOARD TITLE
+========================================================= */
+
+.dashboard-title {
+    background: var(--white);
+
+    padding: 28px 30px;
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 25px;
+}
+
+.dashboard-title h1 {
+    color: var(--navy);
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+
+    font-weight: 700;
+}
+
+.dashboard-title p {
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   DASHBOARD CARDS
+========================================================= */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.dashboard-card {
+    background: var(--white);
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s;
+}
+
+
+/* CARD HOVER */
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 25px rgba(18, 59, 82, 0.12);
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.card-icon {
+    width: 55px;
+
+    height: 55px;
+
+    background: var(--teal-light);
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--teal);
+
+    font-size: 22px;
+
+    flex-shrink: 0;
+}
+
+
+/* LOW STOCK */
+
+.card-icon.warning {
+    background: var(--orange-light);
+
+    color: var(--orange);
+}
+
+
+/* REQUEST */
+
+.card-icon.request {
+    background: var(--green-light);
+
+    color: var(--green);
+}
+
+
+/* TOTAL STOCK */
+
+.card-icon.stock {
+    background: var(--teal-light);
+
+    color: var(--teal);
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.card-info h3 {
+    font-size: 28px;
+
+    margin-bottom: 3px;
+
+    color: var(--text);
+
+    font-weight: 700;
+}
+
+.card-info p {
+    font-size: 14px;
+
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   DASHBOARD SECTIONS
+========================================================= */
+
+.dashboard-section {
+    background: var(--white);
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: var(--navy);
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+.section-header a {
+    color: var(--teal);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.section-header a:hover {
+    color: var(--teal-dark);
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x:auto;
+}
+
+.table-container table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+}
+
+
+/* TABLE HEADER */
+
+.table-container th {
+    background: #F1F6F5;
+
+    padding: 14px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    color: var(--navy);
+
+    font-weight: 600;
+}
+
+
+/* TABLE DATA */
+
+.table-container td {
+    padding: 14px;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 14px;
+
+    color: var(--text);
+}
+
+.table-container tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* TABLE ROW HOVER */
+
+.table-container tbody tr:hover {
+    background: #FAFCFC;
+}
+
+
+/* STRONG TEXT */
+
+.table-container td strong {
+    color: var(--text);
+}
+
+
+/* =========================================================
+   STOCK STATUS
+========================================================= */
+
+.status-in {
+    background: var(--green-light);
+
+    color: var(--green);
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.status-out {
+    background: var(--red-light);
+
+    color: var(--red);
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   NO DATA
+========================================================= */
+
+.no-data {
+    text-align: center;
+
+    color: var(--text-light);
+
+    padding: 25px !important;
+}
+
+
+/* =========================================================
+   PURCHASE REQUEST
+========================================================= */
+
+.empty-request {
+    text-align: center;
+
+    padding: 35px;
+
+    color: var(--text-light);
+}
+
+.empty-request i {
+    font-size: 40px;
+
+    color: var(--teal);
+
+    margin-bottom: 15px;
+}
+
+.empty-request h3 {
+    color: var(--text);
+
+    margin-bottom: 8px;
+}
+
+.empty-request p {
+    font-size: 14px;
+
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   REGISTER / FORM
+========================================================= */
+
+.register-container {
+    background: var(--white);
+
+    width: 850px;
+
+    max-width: 100%;
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+}
+
+.register-container h2 {
+    color: #123B52;
+
+    margin-bottom: 30px;
+
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #D7E0DF;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    background: white;
+
+    color: var(--text);
+
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+
+    border: 1px solid var(--teal);
+
+    box-shadow: 0 0 0 3px rgba(47, 166, 160, 0.10);
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: var(--teal);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--teal-dark);
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 6px 15px rgba(47, 166, 160, 0.20);
+}
+
+
+/* =========================================================
+   PENDING STATUS
+========================================================= */
+
+.status-pending {
+    background: var(--orange-light);
+
+    color: #C96F27;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   APPROVE BUTTON
+========================================================= */
+
+.btn-approve {
+    display: inline-block;
+
+    background: var(--green);
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    margin-right: 5px;
+
+    transition: 0.3s;
+}
+
+.btn-approve:hover {
+    background: #368D65;
+}
+
+
+/* =========================================================
+   REJECT BUTTON
+========================================================= */
+
+.btn-reject {
+    display: inline-block;
+
+    background: var(--red);
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.btn-reject:hover {
+    background: #D84D4D;
+}
+
+
+/* =========================================================
+   ACTION COMPLETED
+========================================================= */
+
+.action-completed {
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   INVENTORY STATUS
+========================================================= */
+
+.inventory-status {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+
+/* IN STOCK */
+
+.in-stock {
+    background: var(--green-light);
+
+    color: var(--green);
+}
+
+
+/* LOW STOCK */
+
+.low-stock {
+    background: var(--orange-light);
+
+    color: #C96F27;
+}
+
+
+/* OUT OF STOCK */
+
+.out-stock {
+    background: var(--red-light);
+
+    color: var(--red);
+}
+
+
+/* EXPIRED */
+
+.expired {
+    background: var(--red-light);
+
+    color: var(--red);
+}
+
+
+/* =========================================================
+   INVENTORY TABLE
+========================================================= */
+
+.table-container table {
+    min-width: 900px;
+}
+
+
+/* =========================================================
+   REPORTS
+========================================================= */
+
+.report-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+.report-button {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 60px;
+
+    padding: 15px 20px;
+
+    background: #F7F9F8;
+
+    color: var(--navy);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.report-button i {
+    font-size: 18px;
+
+    color: var(--teal);
+}
+
+
+.report-button:hover {
+    background: var(--teal);
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(47, 166, 160, 0.20);
+}
+
+.report-button:hover i {
+    color: white;
+}
+
+
+/* =========================================================
+   PRINT BUTTON
+========================================================= */
+
+.print-button {
+    width: auto;
+
+    padding: 10px 18px;
+
+    background: var(--teal);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background: var(--teal-dark);
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .report-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .main-content {
+        margin-left: 250px;
+
+        width: calc(100% - 250px);
+
+        padding: 20px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .user-info {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .report-buttons {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   PRINT REPORT
+========================================================= */
+
+@media print {
+
+    @page {
+        size: A4 landscape;
+        margin: 10mm;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+      background: white !important;
+        overflow: visible !important;
+    }
+
+    /* Hide dashboard navigation */
+    .sidebar,
+    .topbar,
+    .report-buttons,
+    .print-button {
+        display: none !important;
+    }
+
+    /* Main content fills the whole paper */
+    .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .dashboard-page {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .dashboard-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 15px 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .dashboard-title {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* IMPORTANT: allow full table to print */
+    .table-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: visible !important;
+    }
+
+    table {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+        font-size: 9px !important;
+    }
+
+    table th,
+    table td {
+        padding: 6px 5px !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+    }
+
+    table th {
+        font-size: 9px !important;
+    }
+
+    table td {
+        font-size: 9px !important;
+    }
+
+    .status-in,
+    .status-out,
+    .status-pending {
+        font-size: 8px !important;
+        padding: 3px 6px !important;
+    }
+
+    /* Prevent unnecessary horizontal scroll */
+    html,
+    body {
+        overflow-x: visible !important;
+    }
+
+}
+
+/* =========================================================
+   PURCHASE REQUEST - REASON TEXTAREA
+========================================================= */
+
+.form-group textarea[name="reason"] {
+    width: 100%;
+    min-height: 120px;
+    padding: 13px;
+    border: 1px solid #D7E0DF;
+    border-radius: 9px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background: white;
+    color: var(--text);
+    resize: vertical;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.form-group textarea[name="reason"]:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(47, 166, 160, 0.10);
+}
+
+.form-group textarea[name="reason"]::placeholder {
+    color: var(--text-light);
+}
+
+/* =========================================
+   EXPIRY STATUS
+========================================= */
+
+.expiry-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.expiry-status.expired {
+    background: #FDECEC;
+    color: #E85D5D;
+}
+
+.expiry-status.expiring {
+    background: #FFF3E8;
+    color: #F2995A;
+}
+
+.expiry-status.safe {
+    background: #EAF7F0;
+    color: #43A879;
+}
+
+/* =========================================
+   EXPIRY ALERT CARDS
+========================================= */
+
+.expiry-alert-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 0 0 24px 0;
+}
+
+.expiry-alert-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 22px;
+    min-height: 80px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(18, 59, 82, 0.05);
+}
+
+.expiry-alert-item > i {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.expiry-alert-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.expiry-alert-item strong {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text);
+}
+
+.expiry-alert-item span {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+
+/* Expired */
+
+.expired-alert {
+    border-left: 4px solid var(--red);
+}
+
+.expired-alert > i {
+    background: #FDECEC;
+    color: var(--red);
+}
+
+
+/* Expiring Soon */
+
+.expiring-alert {
+    border-left: 4px solid var(--orange);
+}
+
+.expiring-alert > i {
+    background: #FFF3E8;
+    color: var(--orange);
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+    .expiry-alert-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Expiry Status */
+
+.expiry-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.expiry-status.expired {
+    background: #FDECEC;
+    color: var(--red);
+}
+
+.expiry-status.expiring {
+    background: #FFF3E8;
+    color: var(--orange);
+}
+
+.expiry-status.safe {
+    background: #EAF7F0;
+    color: var(--green);
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.analytics-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.analytics-card h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.analytics-card canvas {
+    max-height: 280px;
+}
+
+@media (max-width: 900px) {
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+}
